@@ -1,0 +1,2 @@
+- application name on shopify: faresTestApp
+- store name: fares1978
