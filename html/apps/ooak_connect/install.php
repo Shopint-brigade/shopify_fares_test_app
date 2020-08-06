@@ -2,9 +2,9 @@
 
 // Set variables for our request
 $shop = $_GET['shop'];
-$api_key = "d752390d00b3cade78f052b51b111034";
+$api_key = "25b5105a0ad38ac5b8d6dd05b95df037";
 $scopes = "read_orders,write_products";
-$redirect_uri = "https://331b40912382.ngrok.io/apps/fares_test_app/generate_token.php";
+$redirect_uri = "https://9d51e1e3f737.ngrok.io/apps/ooak_connect/generate_token.php";
 
 
 // Build install/approval URL to redirect to

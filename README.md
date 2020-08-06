@@ -1,2 +1,3 @@
-- application name on shopify: faresTestApp
-- store name: fares1978
+- application name on shopify: OOAK Connect
+- replace $redirect_uri in install.php with Ur https url: change this part: https://9d51e1e3f737.ngrok.io
+- select Ur store on shopify
