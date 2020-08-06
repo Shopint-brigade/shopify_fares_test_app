@@ -2,7 +2,7 @@
 
 // Set variables for our request
 $shop = $_GET['shop'];
-$api_key = "25b5105a0ad38ac5b8d6dd05b95df037";
+$api_key = "91366cacc917c5626d1b3be3fe6c5424";
 $scopes = "read_orders,write_products";
 $redirect_uri = "https://9d51e1e3f737.ngrok.io/apps/ooak_connect/generate_token.php";
 
