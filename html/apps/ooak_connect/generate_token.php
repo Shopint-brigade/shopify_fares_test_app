@@ -42,6 +42,8 @@ if (hash_equals($hmac, $computed_hmac)) {
 
 	// Show the access token (don't do this in production!)
 	echo $access_token;
+	// here need to add a call to DB to save the store name and token
+
 
 } else {
 	// Someone is trying to be shady!
