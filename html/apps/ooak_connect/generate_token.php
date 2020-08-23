@@ -1,11 +1,15 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 
 // Get our helper functions
 require_once("inc/functions.php");
 
 // Set variables for our request
-$api_key = "91366cacc917c5626d1b3be3fe6c5424";
-$shared_secret = "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";
+$api_key = "25b5105a0ad38ac5b8d6dd05b95df037";
+$shared_secret = "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";
 $params = $_GET; // Retrieve all request parameters
 $hmac = $_GET['hmac']; // Retrieve HMAC request parameter
 
@@ -39,10 +43,18 @@ if (hash_equals($hmac, $computed_hmac)) {
 	// Store the access token
 	$result = json_decode($result, true);
 	$access_token = $result['access_token'];
+ 	$link_address = 'https://'. $params['shop'] .'/admin/apps/ooak-connect';
 
-	// Show the access token (don't do this in production!)
-	echo $access_token;
-	// here need to add a call to DB to save the store name and token
+	echo " You have successfully installed the app ";
+	echo "<a href='".$link_address."'> Main Page </a>";
+	$store =  $params['shop']; 
+
+	// add token 
+	$arr = file_get_contents("s_json"); 
+	$arr = json_decode($arr, TRUE);
+	$arr[] = [$store => $access_token];
+	$json = json_encode($arr);
+	file_put_contents("s_json", $json);
 
 
 } else {
